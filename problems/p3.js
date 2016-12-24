@@ -6,7 +6,7 @@ const isPrime = (n) => {
   if (n <= 1) { return false; }
 
   for (let i = 2; Math.pow(i, 2) <= n; i++) {
-    if (n / i === Math.floor(n / i)) {
+    if (n % i === 0) {
       return false;
     }
   }
