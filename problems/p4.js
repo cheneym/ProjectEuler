@@ -18,10 +18,11 @@ const isPalindrome = (s) => {
 const largestPalindromeProduct = (digits) => {
   let lpp = 0;
   let product;
-  for (let i = 1; i < 999; i++) {
-    for (let j = 1; j < 999; j++) {
+  const limit = (10 ** digits) - 1;
+  for (let i = 1; i < limit; i++) {
+    for (let j = 1; j < limit; j++) {
       product = i * j;
-      if (isPalindrome('' + product)) {
+      if (isPalindrome(product.toString())) {
         lpp = Math.max(lpp, product);
       }
     }

@@ -105,7 +105,7 @@ let nums = `37107287533902102798797998220837590246510135740250
 
 const total = nums.reduce((sum, number) => sum + +number, 0);
 let firstTen = total;
-let threshHold = Math.pow(10, 10);
+const threshHold = 10 ** 10;
 while (firstTen >= threshHold) {
   firstTen /= 10;
 }

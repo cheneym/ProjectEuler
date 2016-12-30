@@ -5,7 +5,7 @@
 const getNthPrime = (n) => {
   const primes = [];
   const allNums = [];
-  
+
   for (let i = 2; primes.length < n; i++) {
     if (allNums[i] === undefined) {
       primes.push(i);

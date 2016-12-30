@@ -7,7 +7,7 @@ const stringMult = (multiplicand, multiplier) => {
   let carry = 0;
 
   for (let i = multiplicand.length - 1; i >= 0; i--) {
-    let product = +multiplicand[i] * +multiplier + carry;
+    const product = (+multiplicand[i] * +multiplier) + carry;
     res = (product % 10) + res;
     carry = Math.floor(product / 10);
   }

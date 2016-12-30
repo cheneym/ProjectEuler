@@ -4,14 +4,14 @@
 
 const collatz = (n) => {
   let seqI = n;
-  let sequence = [];
+  const sequence = [];
 
-  while (seqI > 1) {  
+  while (seqI > 1) {
     sequence.push(seqI);
     if (seqI % 2 === 0) {
       seqI /= 2;
     } else {
-      seqI = seqI * 3 + 1;
+      seqI = (seqI * 3) + 1;
     }
   }
   sequence.push(seqI);
@@ -24,7 +24,7 @@ const findLongestCollatzBelow = (n) => {
   let longestSequence = 0;
   let start = Math.floor(n / 2);
   start = start % 2 === 0 ? start - 1 : start;
-  for (let i = start ; i <= n; i += 2) {
+  for (let i = start; i <= n; i += 2) {
     const sequence = collatz(i);
     const newSequenceLength = sequence.length;
     if (newSequenceLength > longestSequence) {
@@ -37,4 +37,4 @@ const findLongestCollatzBelow = (n) => {
 };
 
 // NOTE: TAKES A WHILE
-console.log(findLongestCollatzBelow(Math.pow(10, 6)));
+console.log(findLongestCollatzBelow(10 ** 6));

@@ -27,11 +27,11 @@ const findLargestThirteenAdjacent = (s) => {
   let max = 0;
 
   for (let i = 0; i < s.length - 13; i++) {
-    product = Math.max(s.slice(i, i + 13).reduce((prod, multiplier) => prod * multiplier), 1);
+    const product = Math.max(s.slice(i, i + 13).reduce((prod, multiplier) => prod * multiplier), 1);
     max = Math.max(max, product);
   }
 
   return max;
-}
+};
 
 console.log(findLargestThirteenAdjacent(input));

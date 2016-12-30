@@ -10,7 +10,7 @@
 //     range.push(i);
 //   }
 //   let allDivisible = false;
-  
+
 //   let i = end;
 //   while (!allDivisible) {
 //     allDivisible = range.every(n => i % n === 0);
@@ -38,7 +38,7 @@ const getLowestFactors = (n) => {
   }
 
   return factors;
-}
+};
 
 const smallestDivisibleBy = (start, end) => {
   const highestNumFactors = {};
@@ -47,13 +47,13 @@ const smallestDivisibleBy = (start, end) => {
     const factors = getLowestFactors(i);
     Object.keys(factors).forEach((factor) => {
       highestNumFactors[factor] = highestNumFactors[factor] || 0;
-      highestNumFactors[factor] = Math.max(highestNumFactors[factor], factors[factor])
+      highestNumFactors[factor] = Math.max(highestNumFactors[factor], factors[factor]);
     });
   }
   console.log(highestNumFactors);
-  return Object.keys(highestNumFactors).reduce((product, factor) => {
-    return product * Math.pow(+factor, highestNumFactors[factor]);
-  }, 1);
+  return Object.keys(highestNumFactors).reduce((product, factor) =>
+    product * ((+factor) ** highestNumFactors[factor])
+  , 1);
 };
 
 console.log(smallestDivisibleBy(1, 20));

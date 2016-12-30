@@ -4,8 +4,8 @@
 
 const getSumPrimesBelow = (n) => {
   const allNums = [];
-  let sum = 0;  
-  
+  let sum = 0;
+
   for (let i = 2; i < n; i++) {
     if (allNums[i] === undefined) {
       sum += i;

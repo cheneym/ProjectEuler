@@ -12,11 +12,11 @@ const sumEvenFib = (n) => {
   while (newVal < n) {
     if (newVal % 2 === 0) { sum += newVal; }
     temp = newVal;
-    newVal = newVal + oldVal;
+    newVal += oldVal;
     oldVal = temp;
   }
 
   return sum;
-}
+};
 
 console.log(sumEvenFib(4000000));

@@ -4,6 +4,10 @@ module.exports = {
   "plugins": [
     "react",
     "jsx-a11y",
-    "import"
-  ]
+    "import",
+  ],
+  "rules": {
+    "no-console": 0,
+    "no-plusplus": 0,
+  },
 };
